@@ -81,4 +81,3 @@ print sorted_words
 
 print_first_and_last(sentence)
 print_first_and_last_sorted(sentence)
-
