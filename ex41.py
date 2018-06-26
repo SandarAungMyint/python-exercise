@@ -43,21 +43,21 @@ def convert(snippet, phrase):
     for sentence in snippet, phrase:
         result = sentence[:]
 
-        # fake class names
-        for word in class_names:
+    # fake class names
+    for word in class_names:
             result = result.replace("%%%", word, 1)
 
-        # fake other names
-        for word in other_names:
+    # fake other names
+    for word in other_names:
             result = result.replace("***", word, 1)
 
-       # fake parameter lists
-        for word in param_names:
+     # fake parameter lists
+     for word in param_names:
             result = result.replace("@@@", word, 1)
 
         results.append(result)
 
-    return results
+  return results
 
 
 # keep going until they hit CTRL-D
