@@ -4,21 +4,21 @@ class Animal(object):
 ## ??
 class Dog(Animal):
 
-    def_init_(self, name):
+    def __init__(self, name):
         ## ??
         self.name = name
 
 ## ??
 class Cat(Animal):
 
-    def_init_(self, name):
+    def __init__(self, name):
         ## ??
         self.name = name
 
 ## ??
 class Person(object):
 
-    def_init_(self, name):
+    def __init__(self, name):
         ## ??
         self.name = name
 
@@ -28,18 +28,20 @@ class Person(object):
 ## ??
 class Employee(Person):
 
-    def_init_(self, name, salary):
+    def __init__(self, name, salary):
         ## ?? hmm what is this strange magic?
-        super(Employee, self)._init_(name)
+        super(Employee, self).__init__(name)
         ## ??
         self.salary = salary
 
 ## ??
 class Fish(object):
     pass
+
 ## ??
 class Salmon(Fish):
     pass
+
 ## ??
 class Halibut(Fish):
     pass
