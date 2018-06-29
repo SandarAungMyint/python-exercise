@@ -51,19 +51,19 @@ def convert(snippet, phrase):
     for word in other_names:
             result = result.replace("***", word, 1)
 
-     # fake parameter lists
-     for word in param_names:
+    # fake parameter lists
+    for word in param_names:
             result = result.replace("@@@", word, 1)
 
-        results.append(result)
+    results.append(result)
 
-  return results
+ return results
 
 
 # keep going until they hit CTRL-D
 try:
     while True:
-        snippets = list(PHRASES.keys())
+        snippets = PHRASES.keys()
         random.shuffle(snippets)
 
         for snippet in snippets:
@@ -71,11 +71,12 @@ try:
             question, answer = convert(snippet, phrase)
             if PHRASE_FIRST:
                 question, answer = answer, question
+
             print question
 
 
             raw_input("> ")
-        print "ANSWER : %s\n\n" % answer
+            print "ANSWER : %s\n\n" % answer
 
 except EOFError:
     print "\nBye"
