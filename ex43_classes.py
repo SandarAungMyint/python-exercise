@@ -5,7 +5,7 @@ class Scene(object):
 
 class Engine(object):
 
-    def_init_(self, scene_map):
+    def __init__(self, scene_map):
         pass
 
     def play(self):
@@ -38,7 +38,7 @@ class EscapePod(Scene):
 
 class Map(object):
 
-    def__init__(self, start_scene):
+    def __init__(self, start_scene):
         pass
 
     def mext_scene(self, scene_name):
@@ -47,6 +47,6 @@ class Map(object):
     def opening_scene(self):
         pass
 
-    a_map = Map('central_corridor')
-    a_game = Engine(a_map)
-    a_game.play()
+a_map = Map('central_corridor')
+a_game = Engine(a_map)
+a_game.play()
